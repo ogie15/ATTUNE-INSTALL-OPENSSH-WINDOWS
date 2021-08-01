@@ -29,6 +29,8 @@ if ($Script:ValueProcessEP -eq 0) {
 
 
 
+#Region for Installing OpenSSH
+# ===========================================================================
 # Download OpenSSH (64bit) from Microsoft github repo
 $Sourcerepo = "https://github.com/PowerShell/Win32-OpenSSH/releases/download/V8.6.0.0p1-Beta/OpenSSH-Win64.zip"
 $Destination = ($env:TMP + "\OpenSSH-Win64.zip")
@@ -49,3 +51,5 @@ Start-Sleep -m 1
 
 # Remove the Downloaded OpenSSH file 
 Remove-Item -Path ($env:TMP + "\OpenSSH-Win64.zip") -Force
+# ===========================================================================
+#EndRegion for Installing OpenSSH

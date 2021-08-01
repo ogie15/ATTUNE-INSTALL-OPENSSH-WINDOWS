@@ -28,7 +28,8 @@ if ($Script:ValueProcessEP -eq 0) {
 #EndRegion for ExecutionPolicy 
 
 
-
+#Region for Firewall Rule
+# ===========================================================================
 # Confirm the firewall rule is configured. It should be created automatically by setup.
 if (!(Get-NetFirewallRule -Name *ssh*)) {
     # Write Out message to the screen
@@ -40,3 +41,5 @@ if (!(Get-NetFirewallRule -Name *ssh*)) {
     # Write Out message to the screen
     Write-Output "Firewall Rule sshd already exist"
 }
+# ===========================================================================
+#EndRegion for Firewall Rule

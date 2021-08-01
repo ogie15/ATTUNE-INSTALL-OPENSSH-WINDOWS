@@ -29,6 +29,8 @@ if ($Script:ValueProcessEP -eq 0) {
 
 
 
+#Region for OpenSSH Service
+# ===========================================================================
 # Write Out message to the screen
 Write-Output "Setting sshd service startup type to Automatic"
 
@@ -40,3 +42,6 @@ Write-Output "Starting sshd service..."
 
 # Start sshd service
 Start-Service sshd
+# ===========================================================================
+#EndRegion for OpenSSH Service
+
